@@ -2,21 +2,11 @@ package pkg_Shapes;
 
 import java.util.Comparator;
 
-/**
- * @author Ian Romano
- *
- */
 public class Cuboid extends Rectangle{
-	/**
-	 * iDepth -int which represents the cuboid's depth.
-	 */
+	
 	private int iDepth;
-	/**
-	 * public constructor which takes in ints iLength and iWidth and calls
-	 * rectangles constructor, creating a cuboid of these parameters.
-	 * @param iLength
-	 * @param iWidth
-	 */
+
+	
 	public Cuboid(int iLength, int iWidth, int iDepth) {
 		super(iLength, iWidth);
 		this.iDepth = iDepth;
@@ -31,22 +21,14 @@ public class Cuboid extends Rectangle{
 		this.iDepth = iDepth;
 	}
 
-	/* (non-Javadoc)
-	 * @see pkg_Shapes.Rectangle#area()
-	 * returns surface area of all sides of cuboid. 
-	 */
+	
 	@Override
 	public double area() {
 		return  2 * (super.area()) + 2 * (super.getiLength() * iDepth)
 				+ 2 * (super.getiWidth() * iDepth);
 	}
 	
-	/**
-	 * volume -Returns a double representing the cuboid instance's volume.
-	 * Calculated by multiplying the length/width side of the cuboid with
-	 * the cuboid's depth.
-	 * @return volume
-	 */
+	
 	public double volume() {
 		return super.area() * iDepth;
 	}
@@ -54,13 +36,7 @@ public class Cuboid extends Rectangle{
 	public double perimeter() throws UnsupportedOperationException{
 		throw new UnsupportedOperationException("Method perimiter is not applicicable for type Cuboid");
 	}
-	/**
-	 * SortByArea -This embedded class implements Comparator to allow lists of Cuboids to be
-	 * sorted by surface area in acending order. The constructor does not hava an access modifier as
-	 * per the assignments ULM Diagram.
-	 * @author Ian Romano
-	 *
-	 */
+	
 	public class SortByArea implements Comparator<Cuboid>{
 
 		SortByArea() {
@@ -78,13 +54,7 @@ public class Cuboid extends Rectangle{
 		}
 		
 	}
-	/**
-	 * SortByVolume -This embedded class implements Comparator to allow lists of Cuboids to be
-	 * sorted by volume in acending order. The constructor does not hava an access modifier as
-	 * per the assignments ULM Diagram.
-	 * @author Ian
-	 *
-	 */
+	
 	public class SortByVolume implements Comparator<Cuboid>{
 
 		SortByVolume() {
